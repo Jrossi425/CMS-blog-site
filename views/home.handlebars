@@ -1,0 +1,9 @@
+<h1 class="display-4">Please Choose a Post</h1>
+<div class="blogsection">
+    {{#each blogposts as |blogpost|}}
+        <a href="blogpost/{{blogpost.id}}" class="text-decoration-none">
+            <h2 class="mb-3">{{blogpost.title}}</h2>
+        </a>
+        <p>{{blogpost.starting_date}}</p>
+    {{/each}}
+</div>

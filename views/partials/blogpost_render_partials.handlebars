@@ -1,0 +1,5 @@
+
+{{#each blogposts as |blogpost|}}
+  <a href="blogpost/"+{{blogpost.id}}><h2>{{blogpost.title}}</h2></a>
+  <p>{{blogpost.starting_date}}</p>
+{{/each}}
