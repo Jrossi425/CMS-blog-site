@@ -81,3 +81,20 @@ router.get("/dashboard", withAuth, async (req, res) => {
 });
 
 module.exports = router;
+
+// render the edit.handlebars page if the user is logged in and redirect to the login page if they are not logged in
+router.get("/edit/:id", withAuth, async (req, res) => {
+  try {
+    const blogpostData = await Blogpost.findByPk(req.params.id, {
+      include: [{ model: User, attributes: ["username"] }],
+    });
+    const blogpost = blogpostData.get({ plain: true });
+    console.log(blogpost);
+    res.render("edit", {
+      blogpost,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+})

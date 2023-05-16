@@ -15,7 +15,9 @@
     <a href="blogpost/{{blogpost.id}}" class="text-decoration-none">
         <h2 class="mb-3">{{blogpost.title}}</h2>
     </a>
-    <p>{{blogpost.starting_date}}</p>
+    <p>{{blogpost.createdAt}}</p>
+    <button id="deleteBtn" class="btn btn-danger deleteBtn" data-id="{{blogpost.id}}">Delete</button>
+    <button id = "editBtn" class="btn btn-warning editBtn" data-id="{{blogpost.id}}">Edit</button>
 {{/each}}
 
-<script src="./js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script>

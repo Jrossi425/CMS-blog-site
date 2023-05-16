@@ -49,10 +49,14 @@ router.post("/", async (req, res) => {
 // update a blogpost by id
 router.put("/:id", async (req, res) => {
   try {
-    const blogpostData = await Blogpost.update(req.body, {
+    const blogpostData = await Blogpost.update(
+      {
+      title: req.body.title,
+      content: req.body.content,
+     },
+      {
       where: {
         id: req.params.id,
-        user_id: req.session.id,
       },
     });
     if (!blogpostData) {
@@ -71,7 +75,6 @@ router.delete("/:id", async (req, res) => {
     const blogpostData = await Blogpost.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.id,
       },
     });
     if (!blogpostData) {
