@@ -5,6 +5,7 @@ Week 14 challenge to build a CMS-style blog site similar to a Wordpress site, wh
 
 ## Installation
 N/A
+https://dashboard.heroku.com/apps/cms-blog-site/deploy/github
 ![image](https://github.com/Jrossi425/CMS-blog-site/assets/123151991/8daa365e-de05-4acb-8f44-6233bf580afe)
 ![image](https://github.com/Jrossi425/CMS-blog-site/assets/123151991/c382e1d1-620a-44ac-99cf-93970271594d)
 ![image](https://github.com/Jrossi425/CMS-blog-site/assets/123151991/fb0d9756-6cda-4f35-9a1e-ac34e075e54a)
